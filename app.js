@@ -1,13 +1,13 @@
-// to get textarea
+// input
 let text = document.querySelector("#textInput");
 
-// to get button
 let btn = document.querySelector("#btnTranslate");
 
 
-
-btn.addEventListener("click", clicked);
-
 function clicked(){
-    console.log(text.value);
+        outputDiv.innerHTML = "Hi i am Krunal, " + text.value;
 };
+
+// output
+let outputDiv = document.querySelector(".output");
+btn.addEventListener("click", clicked);
