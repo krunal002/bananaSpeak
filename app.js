@@ -10,6 +10,11 @@ function getTranslatedUrl(text){
         return serverURL + "?" + "text=" + text;
 }
 
+// errorHandler
+function errorHandler(error){
+        alert("Something wrong with server! Try again after some time")
+}
+
 function clicked(){
         // outputDiv.innerHTML = "Hi i am Krunal, " + text.value;
 
@@ -18,6 +23,7 @@ function clicked(){
         fetch(getTranslatedUrl(inputText)) 
         .then(response => response.json())
         .then(json => outputDiv.innerHTML = json.contents.translated)
+        .catch(errorHandler)
 };
 
 // output
