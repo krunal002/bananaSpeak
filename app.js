@@ -22,7 +22,7 @@ function clicked(){
 
         fetch(getTranslatedUrl(inputText)) 
         .then(response => response.json())
-        .then(json => outputDiv.innerHTML = json.contents.translated)
+        .then(json => outputDiv.innerText = json.contents.translated)
         .catch(errorHandler)
 };
 
