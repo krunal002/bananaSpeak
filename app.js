@@ -19,7 +19,7 @@ function clicked(){
         // outputDiv.innerText = "Hi i am Krunal, " + text.value;
 
         let inputText = text.value;
-        console.log(getTranslatedUrl(inputText));
+        
         fetch(getTranslatedUrl(inputText)) 
                 .then(response => response.json())
                 .then(json => {
